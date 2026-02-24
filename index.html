@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body
+    class="bg-transparent select-none overflow-hidden"
+    style="
+      -webkit-app-region: drag;
+      font-family: &quot;Segoe UI&quot;, sans-serif;
+    "
+  >
+    <!-- Dark Glass Card -->
+    <div
+      class="bg-[#0d1117]/90 backdrop-blur-xl rounded-2xl shadow-2xl px-5 py-4 border border-white/5 w-fit"
+    >
+      <!-- Header -->
+      <div class="flex justify-between items-center mb-3">
+        <div>
+          <div
+            id="username"
+            class="text-sm font-semibold text-green-400 tracking-wide"
+          >
+            Loading...
+          </div>
+          <div id="total" class="text-xs text-gray-400"></div>
+        </div>
+
+        <button
+          id="close"
+          class="text-gray-500 hover:text-red-400 transition duration-200 text-sm"
+          style="-webkit-app-region: no-drag"
+        >
+          ✕
+        </button>
+      </div>
+
+      <!-- Grid -->
+      <div
+        id="grid"
+        class="grid gap-[4px]"
+        style="grid-template-rows: repeat(7, 14px); grid-auto-flow: column"
+      ></div>
+
+      <!-- Status -->
+      <div id="status" class="text-[11px] text-gray-500 mt-3">
+        Last updated: —
+      </div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
